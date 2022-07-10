@@ -2,7 +2,7 @@ import React from 'react'
 import { getProviders, signIn as SignIntoProvider, useSession, callbackUrl } from 'next-auth/react'
 import Header from '../../components/Header';
 
-function signIn({ providers }) {
+function SignIn({ providers }) {
     const session = useSession();
     console.log(session);
     console.log(process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET)
@@ -43,4 +43,4 @@ export async function getServerSideProps() {
     }
 }
 
-export default signIn;
+export default SignIn;
