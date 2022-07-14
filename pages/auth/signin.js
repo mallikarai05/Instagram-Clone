@@ -4,8 +4,7 @@ import Header from '../../components/Header';
 
 function SignIn({ providers }) {
     const session = useSession();
-    console.log(session);
-    console.log(process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET)
+
     return (
         <>
             <Header />
@@ -17,7 +16,7 @@ function SignIn({ providers }) {
                 <div className='mt-36'>
                     {Object.values(providers).map((provider) => (
                         <div key={provider.name}>
-                            {console.log(provider.id)}
+
                             <button className='p-3 bg-blue-500 -mt-56 rounded-lg text-white' 
                             onClick={() => SignIntoProvider(provider.id, {callbackUrl:'/'})}>
                                 Sign in with {provider.name}
