@@ -11,6 +11,7 @@ export default NextAuth({
     }),
     // ...add more providers here
   ],
+  secret: NEXTAUTH_URL,
   pages: {
     signIn: '/auth/signin',
   },
